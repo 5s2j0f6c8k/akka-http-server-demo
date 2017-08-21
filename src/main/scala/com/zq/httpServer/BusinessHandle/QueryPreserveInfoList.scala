@@ -18,6 +18,9 @@ object QueryPreserveInfoList extends AppSession {
   final case class QueryPreserveDetail(proName: String, upDate: String, proState: String, proNo: String)
 
   implicit val queryPreserveInfoListRequestFormat = jsonFormat2(QueryPreserveInfoListRequest)
+
+  implicit val queryPreserveDetailFormat = jsonFormat4(QueryPreserveDetail)
+
   implicit val queryPreserveInfoListResponseFormat = jsonFormat5(QueryPreserveInfoListResponse)
 
   val queryPreserveInfoListRoute: Route =

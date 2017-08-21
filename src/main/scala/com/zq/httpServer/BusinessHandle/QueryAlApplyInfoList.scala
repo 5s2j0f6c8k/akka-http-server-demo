@@ -17,6 +17,8 @@ object QueryAlApplyInfoList  extends AppSession{
 
   implicit val queryAlApplyInfoListRequestFormat = jsonFormat1(QueryAlApplyInfoListRequest)
 
+  implicit val queryAlApplyInfoListFormat = jsonFormat3(QueryAlApplyInfoList)
+
   implicit val QueryAlApplyInfoResponseFormat = jsonFormat1(QueryAlApplyInfoResponse)
 
   val queryAlApplyInfoListRoute:Route =

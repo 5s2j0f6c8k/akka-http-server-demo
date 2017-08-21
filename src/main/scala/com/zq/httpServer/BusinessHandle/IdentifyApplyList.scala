@@ -15,6 +15,8 @@ object IdentifyApplyList extends AppSession{
 
   implicit val identifyApplyListRequestFormat = jsonFormat1(IdentifyApplyListRequest)
 
+  implicit val identifyApplyDetailFormat = jsonFormat3(IdentifyApplyDetail)
+
   implicit val identifyApplyListResponseFormat = jsonFormat5(IdentifyApplyListResponse)
 
 
