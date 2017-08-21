@@ -1,10 +1,10 @@
-package com.example
+package com.zq.httpServer
 
 import akka.http.scaladsl.model.headers.{Cookie, `Set-Cookie`}
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import akka.http.scaladsl.model.{HttpEntity, MediaTypes, StatusCodes}
-import com.example.TestData.sessionConfig
+import com.zq.httpServer.TestData.sessionConfig
 import org.scalatest.{Matchers, WordSpec}
 
 class WebServerHttpAppSpec extends WordSpec with Matchers with ScalatestRouteTest {

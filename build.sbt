@@ -4,7 +4,7 @@ lazy val akkaVersion    = "2.5.3"
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
-      organization    := "com.example",
+      organization    := "com.zq.httpServer",
       scalaVersion    := "2.12.2"
     )),
     name := "akka-http-server-demo",

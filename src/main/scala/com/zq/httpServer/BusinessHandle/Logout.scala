@@ -1,18 +1,19 @@
-package com.example.BusinessHandle
+package com.zq.httpServer.BusinessHandle
 
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.server.directives.MethodDirectives.post
 import akka.http.scaladsl.server.directives.PathDirectives.path
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import akka.http.scaladsl.server.Directives._
-import com.example.Session.AppSession
+import com.zq.httpServer.Session.AppSession
 import spray.json.DefaultJsonProtocol._
+import spray.json.RootJsonFormat
 
 object Logout extends AppSession {
 
   final case class LogoutResponse(returnCode: String, returnMessage: String)
 
-  implicit val logoutResponseFormat = jsonFormat2(LogoutResponse)
+  implicit val logoutResponseFormat: RootJsonFormat[LogoutResponse] = jsonFormat2(LogoutResponse)
 
   val logoutRoute: Route =
     path("logout") {
